@@ -13,14 +13,14 @@ Quando("quero cadastrar nova task") do
 end 
 
 Então(/^atribuo a “([^“]*)“$/) do |arg1|
-  @logando.atribuir(usuario)
+  @logando.atribuir("<usuario>")
 
 end
 
-E("crio uma nova task") do
-  @logando.salvar
+#E("crio uma nova task") do
+ # @logando.salvando
 
-end
+#end
 
 
 Quando("quero editar uma nova task") do

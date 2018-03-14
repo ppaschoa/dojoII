@@ -20,7 +20,7 @@ Então atribuo a <usuario>
 		|	"Will Westin"	|
 		|	"Sarah Smith"	|
 		|	"Sally Bronsen"	|
-E crio uma nova task
+#E crio uma nova task
 
 Cenário: edição de task existente
 Quando quero editar uma nova task

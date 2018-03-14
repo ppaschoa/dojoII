@@ -11,8 +11,8 @@ element :nometarefa, 'input#name'
 element :datainicio, 'input#date_start_date'
 element :datafim, 'input#date_due_date'
 #element :descr, 'textarea#description'
-element :atribuido, 'input#assigned_user_name'
-element :salvar, 'input#save'
+element :atribuir, 'input#assigned_user_name'
+element :salvando, 'input#save'
 
 	def login (nomeuser, password)
 		nomeusuario.set(nomeuser)
@@ -33,12 +33,13 @@ element :salvar, 'input#save'
 
 
 	def atribuir (atribuir)
-		atribuido.choose(atribuir)
+		atribuir.set(atribuir)
 
 	end
-
-	def salvar
-		salvar.click
+=begin
+	def salvando
+		salvando.click
+		assert_text ("Criar Tarefa para Dojo II")
 	end
-
+=end
 end	
