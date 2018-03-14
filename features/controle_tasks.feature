@@ -10,22 +10,23 @@ Funcionalidade: Controle de tasks pelo sistema SuitCRM
 Contexto: usuário está logado no sistema
 	Dado que estou logada no sistema
 
-
+@cadastrar
 Esquema do Cenário: cadastro de nova task
 Quando quero cadastrar nova task
 Então atribuo a <usuario>
-
+E crio uma nova task
 	Exemplos:
 		|	usuario			|
-		|	"Will Westin"	|
-		|	"Sarah Smith"	|
-		|	"Sally Bronsen"	|
-#E crio uma nova task
+		|	'Will Westin'	|
+		|	'Sarah Smith'	|
+		|	'Sally Bronsen'	|
 
+@editar
 Cenário: edição de task existente
 Quando quero editar uma nova task
 Então salvo as edições efetuadas
 
+@deletar
 Cenário: deleção de uma task existente 
 Quando quero deletar uma task anteriormente criada
 Então confirmo a exclusão da task selecionada

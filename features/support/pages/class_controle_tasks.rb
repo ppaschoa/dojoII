@@ -11,8 +11,10 @@ element :nometarefa, 'input#name'
 element :datainicio, 'input#date_start_date'
 element :datafim, 'input#date_due_date'
 #element :descr, 'textarea#description'
-element :atribuir, 'input#assigned_user_name'
-element :salvando, 'input#save'
+element :botao_escolher, 'button#btn_assigned_user_name'
+element :atribuir_name, 'input#assigned_user_name'
+#element :salvar, :xpath, '//*[@id="SAVE"]' #Ambiguous match, found 2 elements matching visible xpath "//*[@id=\"SAVE\"]"s
+element :salvar, 'input#SAVE.button.primary' 
 
 	def login (nomeuser, password)
 		nomeusuario.set(nomeuser)
@@ -32,14 +34,13 @@ element :salvando, 'input#save'
 	end
 
 
-	def atribuir (atribuir)
-		atribuir.set(atribuir)
+	def atribuir (add)
+		atribuir_name.set(add).send_keys(:tab)
 
 	end
-=begin
+
 	def salvando
-		salvando.click
+		salvar.click
 		assert_text ("Criar Tarefa para Dojo II")
 	end
-=end
 end	
