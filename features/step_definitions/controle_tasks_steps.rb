@@ -8,7 +8,7 @@ Dado("que estou logada no sistema") do
 end
 
 Quando("quero cadastrar nova task") do
-	@logando.cadastrar("Criar Tarefa para Dojo II", "08/03/2018", "15/03/2018") #"Devemos criar uma task")
+	@logando.cadastrar("Criar Tarefa para Dojo II", "03/08/2018", "03/22/2018") #"Devemos criar uma task")
 
 end 
 
@@ -20,7 +20,6 @@ end
 
 E("crio uma nova task") do
   @logando.salvando
-
 end
 
 

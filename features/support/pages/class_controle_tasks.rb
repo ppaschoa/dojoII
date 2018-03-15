@@ -10,11 +10,9 @@ element :criartask, :xpath, '//*[@id="quickcreatetop"]/ul/li[7]/a'
 element :nometarefa, 'input#name'
 element :datainicio, 'input#date_start_date'
 element :datafim, 'input#date_due_date'
-#element :descr, 'textarea#description'
 element :botao_escolher, 'button#btn_assigned_user_name'
 element :atribuir_name, 'input#assigned_user_name'
 #element :salvar, :xpath, '//*[@id="SAVE"]' #Ambiguous match, found 2 elements matching visible xpath "//*[@id=\"SAVE\"]"s
-element :salvar, 'input#SAVE.button.primary' 
 
 	def login (nomeuser, password)
 		nomeusuario.set(nomeuser)
@@ -35,12 +33,13 @@ element :salvar, 'input#SAVE.button.primary'
 
 
 	def atribuir (add)
-		atribuir_name.set(add).send_keys(:tab)
-
+		atribuir_name.set(add)
+		
 	end
 
 	def salvando
-		salvar.click
+		page.first('input#SAVE.button.primary').click
 		assert_text ("Criar Tarefa para Dojo II")
+
 	end
-end	
+end	 
