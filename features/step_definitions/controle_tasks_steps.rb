@@ -1,4 +1,4 @@
-
+   
 Dado("que estou logada no sistema") do
   @logando = Criar.new
   @logando.load
@@ -20,21 +20,28 @@ end
 
 E("crio uma nova task") do
   @logando.salvando
+
 end
 
 
 Quando("quero editar uma nova task") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @editando = Editar.new
+  
+  @editando.editprioridade("Medium")
+
 end
 
 Então("salvo as edições efetuadas") do
-  pending # Write code here that turns the phrase above into concrete actions
+ @editando.salvaed
+ 
 end
 
 Quando("quero deletar uma task anteriormente criada") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @deletando = Deletar.new
+  @deletando.deletandotask
 end
 
 Então("confirmo a exclusão da task selecionada") do
-  pending # Write code here that turns the phrase above into concrete actions
+  page.driver.browser.switch_to.alert.accept
+  
 end

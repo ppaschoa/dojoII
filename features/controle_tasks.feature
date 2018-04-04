@@ -30,4 +30,4 @@ Então salvo as edições efetuadas
 Cenário: deleção de uma task existente 
 Quando quero deletar uma task anteriormente criada
 Então confirmo a exclusão da task selecionada
-
+ 

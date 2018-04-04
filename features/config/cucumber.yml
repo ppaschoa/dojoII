@@ -1,0 +1,5 @@
+#efetua novos cadastros para fins de criação de massa
+massa: -t @cadastrar
+
+#executado diariamente para fins de controle
+diario: -t @cadastrar -t @editar -t @deletar -f html -o evidencoa_dojo2.html
